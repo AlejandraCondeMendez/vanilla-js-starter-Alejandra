@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>Ejemplo básico</title>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do App</title>
+	<link rel="stylesheet" href="todo.css">
 </head>
-
 <body>
-	<h1>La aplicación esta corriendo!</h1>
+	<h1>Tareas por hacer</h1>
 
-	<script src="./index.js" type="module"></script>
+<div class="tarea">
+
+	<div class="cuadro-texto-A">
+	<input class="ingresarTarea" id="inputTarea" type="text" placeholder="Ingresar tarea">
+	<br>
+	<br>
+	<button class="boton" id="btnAgregar">Agregar</button></div>
+
+	<div class="cuadro-texto-B">
+		<span>Tareas completadas</span>	
+	</div>
+
+	<section id="cont-tareas" class="cont-tareas">
+
+	</section>
+
+</div>
+
+	<script src="index.js" type="module"></script>
 </body>
-
 </html>

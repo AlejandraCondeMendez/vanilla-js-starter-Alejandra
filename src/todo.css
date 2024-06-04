@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    margin-top: 55px;
+}
+.tarea{
+    display: flex;
+}
+
+.cuadro-texto-A{
+    margin-top: 25px;
+    margin-left: 250px;
+}
+.cuadro-texto-B{
+    margin-top: 25px;
+    margin-left: 400px;
+}
+
+.cont-tareas{
+
+    width: 700px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 260px;
+}
