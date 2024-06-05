@@ -9,7 +9,7 @@ let contTareas = document.getElementById("cont-tareas")
 async function insertarDatos() {
     try {
 /*creamos una variable que contenga el texto del input (HTMLlas propiedades que va a tener la API son (id, título y estado (tarea completa o incompleta))*/
-        const liTarea = { 
+        const liTarea = { //el cuerpo que debe tener la API
             id: Date.now(), 
             titulo: inputTarea.value,
             estado: false
@@ -39,7 +39,6 @@ async function extraerDatos() {
          const guardarResponse = await response.json()
          console.log(guardarResponse);
          return guardarResponse   
-         
         }
     } catch (error) {
         console.log(error);
@@ -107,13 +106,19 @@ async function actualizarDatos(id) {
         listTarea = {
             estado: !data.estado
         }
-
-        const response = await fetch (`http://localhost:3000/api/task/${id}`)
         
- } catch (error) {
-    console.log(error);
- }   
+        const response = await fetch (`http://localhost:3000/api/task/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify(listTarea)
+        });
+        
+        const guardarResponse = await response.json()
+        console.log(guardarResponse);
+
+     } catch (error) {
+        console.log(error);
+    }   
 }
-
-
-
