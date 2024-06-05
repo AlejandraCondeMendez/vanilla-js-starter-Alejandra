@@ -3,6 +3,9 @@
 let inputTarea = document.getElementById("inputTarea")
 let btnAgregar = document.getElementById("btnAgregar")
 let contTareas = document.getElementById("cont-tareas")
+let contNumeros = document.getElementById("contNumeros")
+let completadas = document.getElementById("tareasCompletadas")
+
 
 //primero creamos un método POST para guardar la lista de tareas en la API
 
@@ -67,6 +70,14 @@ async function mostrar() {
             boton.addEventListener("click", () => {
                 borrarDatos(iterar.id)
             })
+            checkbox.addEventListener("click", () => {
+                if (checkbox.checked==true) {
+                actualizarDatos(iterar.id)
+                completadas.value++
+                }else{
+                completadas.value--
+                }
+            })
         })
     
     } catch (error) {
@@ -77,18 +88,17 @@ async function mostrar() {
 btnAgregar.addEventListener("click", insertarDatos)
 
 //MÉTODO DELETE
-
 async function borrarDatos(id) {
     try {
         const response = await fetch (`http://localhost:3000/api/task/${id}`, {
             method: "DELETE"
         })
-        if (!response.ok) { //
+        if (!response.ok) { // Si la respuesta salio mal
             throw new Error ("Algo salió mal")   
         }
         console.log(`se borró la tarea: ${id}`);
     } catch (error) {
-     console.log(error);   
+        console.log(error);   
     }
     mostrar()
 }
@@ -101,24 +111,25 @@ mostrar()
 async function actualizarDatos(id) {
     try {
         const tareasResponse = await fetch(`http://localhost:3000/api/task/${id}`)
-        const data = await response.json()
-
+        const data = await tareasResponse.json()
         listTarea = {
             estado: !data.estado
         }
-        
         const response = await fetch (`http://localhost:3000/api/task/${id}`, {
-        method: "PUT",
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        },
-        body: JSON.stringify(listTarea)
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(listTarea)
         });
         
         const guardarResponse = await response.json()
         console.log(guardarResponse);
-
-     } catch (error) {
+        
+    } catch (error) {
         console.log(error);
     }   
 }
+
+
+
