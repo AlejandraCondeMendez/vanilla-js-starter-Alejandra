@@ -1,6 +1,7 @@
 h1{
     text-align: center;
     margin-top: 55px;
+    margin-left: 100px;
 }
 .tarea{
     display: flex;
@@ -8,11 +9,11 @@ h1{
 
 .cuadro-texto-A{
     margin-top: 25px;
-    margin-left: 250px;
+    margin-left: 260px;
 }
 .cuadro-texto-B{
     margin-top: 25px;
-    margin-left: 330px;
+    margin-left: 390px;
 
 }
 
@@ -49,6 +50,8 @@ h1{
     height: 40px;
     border: 1px solid;
     border-radius: 50%;
+    padding: 15px;
     margin-left: 5px;
     text-align: center;
+    font-size: 15px;
 }
