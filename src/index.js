@@ -30,9 +30,6 @@ import { borrarDatos } from "./delete"
 
 mostrar()
 
-
-
-
 function validacionInput() {
     if (inputTarea.value = "") {
         alert("INGRESE UN TEXTO") 

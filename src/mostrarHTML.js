@@ -19,6 +19,11 @@ contTareas.innerHTML=""
             checkbox.type = "checkbox" //que el input sea de tipo checkbox
             p.appendChild(checkbox) //al lado del p va al checkbox
             contenedor.appendChild(p)
+            checkbox.checked=iterar.estado //el estado de checked va a ser igual a iterar.estado 
+            if (checkbox.checked) { //si estan marcadas se aumenta el contador (checked es el estado true o false)
+                completadas.value++ //si estan marcadas va aumentar el contador
+            } 
+
             p.appendChild(boton)
             boton.innerHTML = "Eliminar"
             contTareas.appendChild(contenedor)
@@ -41,5 +46,6 @@ contTareas.innerHTML=""
         console.error(error);
     }
 }
+
 
 export{mostrar}

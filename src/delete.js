@@ -13,6 +13,7 @@ async function borrarDatos(id) {
         console.log(error);   
     }
     mostrar()
+    location.reload() //recagar para no mover los datos
 }
 
 export{borrarDatos}

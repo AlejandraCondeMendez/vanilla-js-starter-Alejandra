@@ -19,6 +19,7 @@ async function insertarDatos() {
         console.log(guardarResponse);
         console.log(`Se agrego la tarea ${liTarea.titulo}`);
         mostrar()
+        location.reload() //recargamos la página 
     } catch (error) {
         console.log(error);
     }
