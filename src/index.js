@@ -3,7 +3,6 @@
 let inputTarea = document.getElementById("inputTarea")
 let btnAgregar = document.getElementById("btnAgregar")
 let contTareas = document.getElementById("cont-tareas")
-let contNumeros = document.getElementById("contNumeros")
 let completadas = document.getElementById("tareasCompletadas")
 
 
