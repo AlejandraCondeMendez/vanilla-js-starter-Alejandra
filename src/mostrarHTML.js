@@ -4,6 +4,22 @@ import { extraerDatos } from "./get"
 import { actualizarDatos } from "./put"
 import { borrarDatos } from "./delete"
 
+import "../src/todo.css"
+
+import Swal from 'sweetalert2'
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'center',
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast',
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  })
+
 async function mostrar() {
 contTareas.innerHTML=""
     inputTarea.value=""
@@ -23,12 +39,20 @@ contTareas.innerHTML=""
             if (checkbox.checked) { //si estan marcadas se aumenta el contador (checked es el estado true o false)
                 completadas.value++ //si estan marcadas va aumentar el contador
             } 
-
+            contenedor.classList.add("estiloDiv")
+            checkbox.classList.add("estiloCheck")
+            boton.classList.add("estiloBotoncito")
             p.appendChild(boton)
             boton.innerHTML = "Eliminar"
             contTareas.appendChild(contenedor)
-            boton.addEventListener("click", () => {
-                borrarDatos(iterar.id)
+            boton.addEventListener("click", async() => {
+                if (borrarDatos(iterar.id)) {
+                    await Toast.fire({
+                        title: 'OH NO, ¡ERROR!',
+                        text: 'INGRESE UN TEXTO',
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                      })}
             })
             checkbox.addEventListener("click", () => {
                 if (checkbox.checked != true) { //si es distinto de verdadero (falso)ejecutar la función y disminuir el contador

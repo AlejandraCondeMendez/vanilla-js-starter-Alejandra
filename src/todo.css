@@ -17,6 +17,16 @@ h1{
 
 }
 
+.estiloDiv{
+    border: 1px solid #000;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.estiloBotoncito{
+    display: flex;
+    background-color: red;
+    margin-left: 600px;
+}
 .cont-tareas{
     width: 700px;
     height: 300px;
@@ -62,3 +72,36 @@ h1{
     padding: 7px;
     border: 1 px solid;
 }
+
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+  }
+  
+  .colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+  }
+  
+  .colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+  }
+  
+  .colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+  }
+  
+  .colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+  }
+  
+  .colored-toast .swal2-title {
+    color: white;
+  }
+  
+  .colored-toast .swal2-close {
+    color: white;
+  }
+  
+  .colored-toast .swal2-html-container {
+    color: white;
+  }
+  

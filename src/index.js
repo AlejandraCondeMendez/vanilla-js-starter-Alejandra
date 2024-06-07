@@ -32,7 +32,8 @@ btnAgregar.addEventListener("click", async() => {
     if ( await validacionInput()) { //la funcion validarInput toma como condición el contenido del input, si esta vacía muestra la alerta
     //si hay algo escrito agrega la tarea (insertarDatos)
     } else {
-        insertarDatos() 
+        insertarDatos()
+       
     }
 })
 
@@ -53,7 +54,7 @@ async function validacionInput() {
         await Toast.fire({
             title: 'OH NO, ¡ERROR!',
             text: 'INGRESE UN TEXTO',
-            icon: 'success',
+            icon: 'error',
             confirmButtonText: 'Cool'
           })
           return true
@@ -61,3 +62,7 @@ async function validacionInput() {
     }
     return false
 } 
+
+
+
+
