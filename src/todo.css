@@ -1,7 +1,7 @@
 h1{
     text-align: center;
     margin-top: 55px;
-    margin-left: 100px;
+    margin-left: 40px;
 }
 .tarea{
     display: flex;
@@ -13,12 +13,11 @@ h1{
 }
 .cuadro-texto-B{
     margin-top: 25px;
-    margin-left: 390px;
+    margin-left: 370px;
 
 }
 
 .cont-tareas{
-
     width: 700px;
     height: 300px;
     border: 1px solid #000;
@@ -54,4 +53,12 @@ h1{
     margin-left: 5px;
     text-align: center;
     font-size: 15px;
+}
+
+.barraBuscar{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 22px;
+    padding: 7px;
+    border: 1 px solid;
 }
