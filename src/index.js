@@ -30,7 +30,6 @@ import { mostrar } from "./mostrarHTML"
 
 btnAgregar.addEventListener("click", async() => {
     if ( await validacionInput()) { //la funcion validarInput toma como condición el contenido del input, si esta vacía muestra la alerta
-    
     //si hay algo escrito agrega la tarea (insertarDatos)
     } else {
         insertarDatos() 
