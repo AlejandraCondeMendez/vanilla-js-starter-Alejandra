@@ -50,9 +50,9 @@ contTareas.innerHTML=""
             boton.addEventListener("click", async() => {
                 if (borrarDatos(iterar.id)) {
                     await Toast.fire({
-                        title: 'OH NO, ¡ERROR!',
-                        text: 'ELIMINADO',
-                        icon: 'error',
+                        title: 'TAREA ELIMINADA',
+                        text: 'TEXTO ELIMINADO',
+                        icon: 'warning',
                         confirmButtonText: 'Cool'
                       })   
                 
