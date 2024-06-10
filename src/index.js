@@ -64,7 +64,7 @@ async function validacionInput() {
             icon: 'error',
             confirmButtonText: 'Cool'
           })
-          return true
+          return true 
         // alert("INGRESE UN TEXTO") 
     }
     return false

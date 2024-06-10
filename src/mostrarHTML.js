@@ -43,6 +43,7 @@ contTareas.innerHTML=""
             contenedor.classList.add("estiloDiv")
             checkbox.classList.add("estiloCheck")
             boton.classList.add("estiloBotoncito")
+            p.classList.add("estiloTexto")
             p.appendChild(boton)
             boton.innerHTML = "Eliminar"
             contTareas.appendChild(contenedor)
