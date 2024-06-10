@@ -51,10 +51,14 @@ contTareas.innerHTML=""
                 if (borrarDatos(iterar.id)) {
                     await Toast.fire({
                         title: 'OH NO, ¡ERROR!',
-                        text: 'INGRESE UN TEXTO',
+                        text: 'ELIMINADO',
                         icon: 'error',
                         confirmButtonText: 'Cool'
-                      })}
+                      })   
+                
+                }
+
+                console.log("holaa")
             })
             checkbox.addEventListener("click", () => {
                 if (checkbox.checked != true) { //si es distinto de verdadero (falso)ejecutar la función y disminuir el contador
