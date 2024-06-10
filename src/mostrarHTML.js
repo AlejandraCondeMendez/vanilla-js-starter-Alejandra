@@ -8,6 +8,7 @@ import "../src/todo.css"
 
 import Swal from 'sweetalert2'
 
+
 const Toast = Swal.mixin({
     toast: true,
     position: 'center',

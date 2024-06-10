@@ -9,6 +9,13 @@ let completadas = document.getElementById("tareasCompletadas")
 import { insertarDatos } from "./post"
 import Swal from 'sweetalert2'
 
+
+inputTarea.addEventListener("keydown",(e)=>{
+    if(e.key=="Enter"){ //si la tecla es enter se ejecuta la función InsertarDatos
+        insertarDatos()
+    }
+})
+
 const Toast = Swal.mixin({
     toast: true,
     position: 'center',
