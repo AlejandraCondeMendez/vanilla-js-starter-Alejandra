@@ -22,7 +22,7 @@ const Toast = Swal.mixin({
   })
 
 async function mostrar() {
-contTareas.innerHTML=""
+contTareas.innerHTML="" // Limpia el contenido del contenedor, antes de agregar la tarea. Evitando la duplicidad de
     inputTarea.value=""
     try {
         let arrayVacio = await extraerDatos()
@@ -57,8 +57,6 @@ contTareas.innerHTML=""
                       })   
                 
                 }
-
-                console.log("holaa")
             })
             checkbox.addEventListener("click", () => {
                 if (checkbox.checked != true) { //si es distinto de verdadero (falso)ejecutar la función y disminuir el contador

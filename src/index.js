@@ -10,11 +10,12 @@ import { insertarDatos } from "./post"
 import Swal from 'sweetalert2'
 
 
-inputTarea.addEventListener("keydown",(e)=>{
-    if(e.key=="Enter"){ //si la tecla es enter se ejecuta la función InsertarDatos
+inputTarea.addEventListener("keydown",(e)=>{ //es el evento de tocar la tecla
+    if(e.key=="Enter" && !validacionInput()){ //si la tecla es enter se ejecuta la función InsertarDatos
         insertarDatos()
     }
 })
+
 
 const Toast = Swal.mixin({
     toast: true,
@@ -70,6 +71,14 @@ async function validacionInput() {
     return false
 } 
 
-
+/*async function validarContenedor() {
+   if (contTareas === "") {
+    contTareas = "No hay tarea"
+   } else {
+    await mostrar()
+   }
+        
+}
+validarContenedor()*/
 
 
