@@ -26,6 +26,7 @@ contTareas.innerHTML="" // Limpia el contenido del contenedor, antes de agregar 
     inputTarea.value=""
     try {
         let arrayVacio = await extraerDatos()
+        completadas.value=0
         arrayVacio.forEach(iterar => { // Por cada tarea que traemos vamos a hacer etiquetas 
             const contenedor = document.createElement("div")
             const p = document.createElement("p")
@@ -37,7 +38,7 @@ contTareas.innerHTML="" // Limpia el contenido del contenedor, antes de agregar 
             p.appendChild(checkbox) //al lado del p va al checkbox
             contenedor.appendChild(p)
             checkbox.checked=iterar.estado //el estado de checked va a ser igual a iterar.estado 
-            if (checkbox.checked) { //si estan marcadas se aumenta el contador (checked es el estado true o false)
+            if (checkbox.checked && iterar.estado) { //si estan marcadas se aumenta el contador (checked es el estado true o false)
                 completadas.value++ //si estan marcadas va aumentar el contador
             } 
             contenedor.classList.add("estiloDiv")
@@ -54,8 +55,7 @@ contTareas.innerHTML="" // Limpia el contenido del contenedor, antes de agregar 
                         text: 'TEXTO ELIMINADO',
                         icon: 'warning',
                         confirmButtonText: 'Cool'
-                      })   
-                
+                    })   
                 }
             })
             checkbox.addEventListener("click", () => {

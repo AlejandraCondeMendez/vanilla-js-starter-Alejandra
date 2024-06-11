@@ -9,11 +9,10 @@ async function borrarDatos(id) {
             throw new Error ("Algo salió mal")   
         }
         console.log(`se borró la tarea: ${id}`);
-        mostrar()
+        await mostrar()
     } catch (error) {
         console.log(error);   
     }
-    mostrar()
     //recagar para no mover los datos
 }
 

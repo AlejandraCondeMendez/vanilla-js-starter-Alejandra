@@ -1,3 +1,5 @@
+import { mostrar } from "./mostrarHTML";
+
 async function actualizarDatos(id) {
     try {
         const tareasResponse = await fetch(`http://localhost:3000/api/task/${id}`)
@@ -12,10 +14,8 @@ async function actualizarDatos(id) {
             },
             body: JSON.stringify(listTarea)
         });
-        
         const guardarResponse = await response.json()
         console.log(guardarResponse);
-
     } catch (error) {
         console.log(error);
     }   
