@@ -17,7 +17,7 @@ async function insertarDatos() {
             },
             body: JSON.stringify(liTarea) //pasa liTarea (objeto) a formato json
         })
-        const guardarResponse = await response.json()
+        const guardarResponse = await response.json() //espera que el formato de la API sea json y luego pasa ese tipo de dato a js
         console.log(guardarResponse);
         console.log(`Se agrego la tarea ${liTarea.titulo}`);
         mostrar()

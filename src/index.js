@@ -67,7 +67,7 @@ import { borrarDatos } from "./delete"
 mostrar()
 
 async function validacionInput() {
-    if (inputTarea.value.trim("") === "") { //método de la clase string
+    if (inputTarea.value.trim("") === "") { //método de la clase string - quita los espacios vacíos que inputTarea puede tener
         await Toast.fire({
             title: 'OH NO, ¡ERROR!',
             text: 'INGRESE UN TEXTO',

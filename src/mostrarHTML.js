@@ -25,8 +25,8 @@ async function mostrar() {
 contTareas.innerHTML="" // Limpia el contenido del contenedor, antes de agregar la tarea. Evitando la duplicidad de
     inputTarea.value=""
     try {
-        let arrayVacio = await extraerDatos()
-        completadas.value=0
+        let arrayVacio = await extraerDatos() //lo que retorna extraerDatos
+        completadas.value=0 //cambiar valor de contador  cero
         arrayVacio.forEach(iterar => { // Por cada tarea que traemos vamos a hacer etiquetas 
             const contenedor = document.createElement("div")
             const p = document.createElement("p")
