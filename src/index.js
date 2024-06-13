@@ -1,4 +1,3 @@
-
 // Inserte el código aquí
 let inputTarea = document.getElementById("inputTarea")
 let btnAgregar = document.getElementById("btnAgregar")
@@ -67,7 +66,7 @@ import { borrarDatos } from "./delete"
 mostrar()
 
 async function validacionInput() {
-    if (inputTarea.value.trim("") === "") { //método de la clase string - quita los espacios vacíos que inputTarea puede tener
+    if (inputTarea.value.trim("") === "") { //método de la clase string
         await Toast.fire({
             title: 'OH NO, ¡ERROR!',
             text: 'INGRESE UN TEXTO',
@@ -89,5 +88,3 @@ async function validacionInput() {
         
 }
 validarContenedor()*/
-
-

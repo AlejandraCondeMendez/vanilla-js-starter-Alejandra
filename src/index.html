@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>To Do App</title>
-	<link rel="stylesheet" href="todo.css">
-</head>
-<body>
-	<input type="ASas">
-	
+<div class="tarea">
 
+	<div class="cuadro-texto-A">
+	<input class="ingresarTarea" id="inputTarea" type="text" placeholder="Ingresar tarea">
+	<br>
+	<br>
+	<button type="button" class="boton" id="btnAgregar">Agregar</button></div>
 
+	<div class="cuadro-texto-B">
+		<span>Tareas completadas</span>
+			<input class="tareasContador" id="tareasCompletadas" type="number" value="0">
+	</div>
 
+	<section id="cont-tareas" class="cont-tareas">
 
+	</section>
 
+</div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="index.js" type="module"></script>
 </body>
 </html>

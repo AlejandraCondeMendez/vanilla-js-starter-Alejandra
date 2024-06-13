@@ -5,7 +5,7 @@ import { mostrar } from "./mostrarHTML";
 async function insertarDatos() {
     try {
 /*creamos una variable que contenga el texto del input (HTMLlas propiedades que va a tener la API son (id, título y estado (tarea completa o incompleta))*/
-        const liTarea = { //el cuerpo que debe tener la API
+        const usuario = { //el cuerpo que debe tener la API
             id: Date.now(), 
             titulo: inputTarea.value,
             estado: false
